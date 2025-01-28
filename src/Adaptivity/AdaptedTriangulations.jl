@@ -46,7 +46,8 @@ is_related(t1::Triangulation,t2::Triangulation) = is_child(t1,t2) || is_child(t2
 
 # Wrap Triangulation API
 function Geometry.get_background_model(t::AdaptedTriangulation)
-  get_background_model(t.trian) # === get_model(get_adapted_model(t))
+  # get_background_model(t.trian) # === get_model(get_adapted_model(t))
+  t.adapted_model
 end
 
 function Geometry.get_grid(t::AdaptedTriangulation)
